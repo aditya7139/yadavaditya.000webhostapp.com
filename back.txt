@@ -1,0 +1,124 @@
+                    <!-- <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a class="nav-link ml-2"  href="#pageawards">AWARDS</a>
+                    </li> -->
+                    <!-- <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a class="nav-link ml-2 " href="#pagetestimonials">TESTIMONIALS</a>
+                    </li> -->
+                    <!-- <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a class="nav-link ml-2"  href="#pageportfolio">PORTFOLIO</a>
+                    </li> -->  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <!-- <div class="Awards" style="display: inline-block;">
+        <article class="awards gray-bg" id="pageawards">
+            <div class="inner">
+                <h2 class="heading">Honours &amp; Awards</h2>
+
+                <h4>MX PLAYER (TIMES INTERNET LIMITED)</h4>
+                <span>
+                    Best Performance of the Month<br />
+                    Feb' 2019
+                </span>
+
+                <div class="divider-light"></div>
+
+                <h4>SCHOLARSHIP EXAMINATION (MSCE), [year]</h4>
+                <span>
+                    Medalist <br />
+                    [year]
+                </span>
+
+                <div class="divider-light"></div>
+
+                <h4>ART COMPETITION, [year]</h4>
+                <span>
+                    Certificate of Honour <br />
+                    [year]
+                </span>
+
+                <div class="divider-light"></div>
+
+                <h4>____PAINTING CONTEST</h4>
+                <span>
+                    First Prize <br />
+                    [year]
+                </span>
+            </div>
+        </article>
+    </div> -->
+
+
+    <!-- <div class="Testimonials" style="display: inline-block;">
+        <article class="testimonials white-bg" id="pagetestimonials">
+            <div class="inner">
+                <h2 class="heading">Testimonials</h2>
+
+                <p style="text-align: center;">(..... Feedbacks given by the members of Organizations .....)</p>
+
+                <h4>Organisation name</h4>
+                <span> Date </span>
+                <p>
+                    “Content”
+                </p>
+
+            <div class="divider-light"></div>
+
+                <h4>Organisation name</h4>
+                <span> Date </span>
+                <p>
+                    “Content”
+                </p>
+
+            </div>
+        </article>
+    </div> -->
+
+    <!-- <div class="Portfolio" style="display: inline-block;">
+        <article class="portfolio white-bg" id="pageportfolio">
+            <div class="inner">
+                <h2 class="heading">Portfolio</h2>
+                <h3 class="subheading">Some  Graphics Designing work by me</h3>
+                <div class="row" style="margin-bottom: 20px;">
+                    <div class="md-4 sm-12 design" style="padding: 10px;">
+                        <img src="assets/img/dreamcatcher.jpg" alt="img here" width="200px" height="180px">
+                    </div>
+                    <div class="md-4 sm-12 design" style="padding: 10px;">
+                        <img src="assets/img/Photo.jpg" alt="img here" width="200px" height="180px">
+                    </div>
+                    <div class="md-4 sm-12 design" style="padding: 10px;">
+                        <img src="assets/img/photomanipulation.jpg" alt="img here" width="200px" height="180px">
+                    </div>
+                </div>
+
+                <h3 class="subheading">Some Other Designs by me</h3>
+                <div class="row" style="margin-bottom: 20px;">
+                    <div class="md-4 sm-12 design" style="padding: 10px;">
+                        <img src="assets/img/tiger.png" alt=" img here" width="200px" height="180px">
+                    </div>
+                    <div class="md-4 sm-12 design" style="padding: 10px;">
+                        <img src="assets/img/assignment.png" alt="img here" width="200px" height="180px">
+                    </div>
+                    <div class="md-4 sm-12 design" style="padding: 10px;">
+                        <img src="assets/img/Cafe-8.jpg" alt="img here" width="200px" height="180px">
+                    </div>
+                </div>
+
+    
+            </div>
+
+        </article>
+    </div> -->
