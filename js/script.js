@@ -1,5 +1,5 @@
 
-  $(window).resize(function(){
+$(window).resize(function(){
 
     if ($(window).width() <= 768) {  
 
@@ -96,3 +96,9 @@ window.onload = function() {
     return false;
   }
 };
+
+
+
+
+
+
