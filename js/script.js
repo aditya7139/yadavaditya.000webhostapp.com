@@ -49,53 +49,7 @@ $(document).ready(function () {
     });
 });
 
-// Restricting Opening Inspect and View Page Source and Right Click
 
-// window.onload = function() {
-//   document.addEventListener("contextmenu",function(event){
-//     event.preventDefault();
-//     var contextMenu = document.getElementById("context-menu");
-//     contextMenu.style.display = "block";
-//     var x = event.x, y = event.y, X = window.innerWidth, Y = window.innerHeight, w = contextMenu.offsetWidth+4, h = contextMenu.offsetHeight+4;
-//     if(X-x<w) contextMenu.style.left = x-w+"px";
-//     else contextMenu.style.left = x+"px";
-//     if(Y-y<h) contextMenu.style.top = y-h+"px";
-//     else contextMenu.style.top = y+"px";
-//   },false);
-//   document.addEventListener("click",function(event){
-//   },false);
-//   document.addEventListener("keydown", function(e) {
-//     // "I" key
-//     if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
-//       disabledEvent(e);
-//     }
-//     // "J" key
-//     if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
-//       disabledEvent(e);
-//     }
-//     // "S" key + macOS
-//     if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
-//       disabledEvent(e);
-//     }
-//     // "U" key
-//     if (e.ctrlKey && e.keyCode == 85) {
-//       disabledEvent(e);
-//     }
-//     // "F12" key
-//     if (event.keyCode == 123) {
-//       disabledEvent(e);
-//     }
-//   }, false);
-//   function disabledEvent(e){
-//     if (e.stopPropagation){
-//       e.stopPropagation();
-//     } else if (window.event){
-//       window.event.cancelBubble = true;
-//     }
-//     e.preventDefault();
-//     return false;
-//   }
-// };
 
 
 // Corona Tracker Boxes
@@ -158,17 +112,98 @@ $.getJSON({
 });
 
 
-// fetch('http://mohfw.gov.in/data/datanew.json')
-//     .then(res => res.json())
-//     .then((out) => {
-//         console.log('Output: ', out);
-// }).catch(err => console.error(err));
+
+// Scroll Top Button 
+
+//Get the button:
+    // mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction();};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById('myBtn').style.display = "block";
+        } 
+        else {
+            document.getElementById('myBtn').style.display = "none";
+        }
+    }
+
+// When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
 
 
 
-const proxyurl = "http://mohfw.gov.in/data/datanew.json";
-const url = ""; // site that doesn’t send Access-Control-*
-fetch(proxyurl + url) // https://cors-anywhere.herokuapp.com/https://example.com
-.then(response => response.text())
-.then(contents => console.log(contents))
-.catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
+
+
+// Google Pie Chart using json data
+
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+
+    $.ajax({
+        url: "./data.json",
+        dataType: "json",
+        type: "GET",
+        contentType: "application/json; charset=utf-8",
+        success: function (data) {
+
+            var arr = [['Cases Type','Count']];    // Define an array and assign columns for the chart.
+
+            // Loop through each data and populate the array.
+            $.each(data, function (index, value) {
+                if(value.sno=="11111"){
+                arr.push(['Active',parseInt(value.new_active)]);
+                arr.push(['Cured',parseInt(value.new_cured)]);
+                arr.push(['Death',parseInt(value.new_death)]);
+                }
+            });
+
+            // console.log(arr)
+        
+            var piechart = google.visualization.arrayToDataTable(arr);
+
+            var options = {
+
+                title: 'Covid-19 Cases in India',
+                // legend: {position: 'center'},
+                is3D: true,
+                // pieHole: 0.4,
+                // pieStartAngle: 100,
+                // pieSliceText: 'label',
+                // pieSliceText: 'value-&-percentage',
+                // tooltip: { trigger: 'none' },
+                slices: { 0: { color: 'blue' }, 1: { color: '#138808' }, 2: {color: 'red'} },
+                // sliceVisibilityThreshold: '',
+
+                backgroundColor: 'transparent',
+
+                legend: {position: 'labeled'},
+
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(piechart, options);
+        },
+
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            alert('Got an Error');
+        }
+
+    });
+}
+
+// Pop up chart on hover
+
+$(function() {
+    $('.box-faces').hover(function() {
+        $('#piechart').toggle();
+    });
+});

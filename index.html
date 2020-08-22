@@ -38,6 +38,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
     
+    <!-- Google Charts API Reference -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    
     <!-- Web fonts Included   -->
     <link href="https://fonts.googleapis.com/css?family=Caveat|Dancing+Script|Oswald|Raleway|Roboto|Satisfy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,100italic,100,400italic,500,500italic,700,900,900italic,700italic%7COswald:400,300,700" rel="stylesheet" />
@@ -45,6 +48,11 @@
     
     <!-- Javascript included for functionality  -->
     <script src="js/script.js"></script>
+    <!-- <script src="js/strict.js"></script> -->
+
+    <script data-ad-client="pub-8683561291786427" async src="https://pagead2.googlesyndication
+    .com/pagead/js/adsbygoogle.js"></script>
+
 
 </head>
 
@@ -563,31 +571,14 @@
     </div>                    <!-- end of page div-->
 
 
+    <div id="piechart"></div>
 
-    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <button onclick="topFunction()" style="display:none" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
 
+   
 
 </div>
+
+
 </body>
-<script>
-    //Get the button:
-    mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
-      }
-    }
-
-// When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-      document.body.scrollTop = 0; // For Safari
-      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    }
-</script>
 </html>

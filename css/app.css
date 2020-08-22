@@ -323,3 +323,12 @@ color: #545454;line-height: 22px}
   font-size:12px;
   color: maroon;
 }
+
+
+#piechart{
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+}
