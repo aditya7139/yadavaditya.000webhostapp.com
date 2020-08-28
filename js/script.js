@@ -95,6 +95,8 @@ $.getJSON({
                 document.getElementById('death_change').append(value.new_death-value.death);   
                 
 
+                document.getElementById('last-updated').append(value.date);
+
             }
 
 
@@ -207,3 +209,4 @@ $(function() {
         $('#piechart').toggle();
     });
 });
+
