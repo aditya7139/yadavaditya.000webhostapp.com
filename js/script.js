@@ -210,3 +210,34 @@ $(function() {
     });
 });
 
+
+function AppearItemfromDown() {
+
+    setTimeout(function() {
+        $('.has-animation-down').each(function() {
+            $(this).appear(function() {
+                $(this).delay($(this).attr('data-delay')).queue(function(next) {
+                    $(this).addClass('animate-in');
+                    next();
+                });
+            });
+        });
+    }, 250);
+}
+function AppearItemfromLeft() {
+
+    setTimeout(function() {
+        $('.has-animation-left').each(function() {
+            $(this).appear(function() {
+                $(this).delay($(this).attr('data-delay')).queue(function(next) {
+                    $(this).addClass('animate-in');
+                    next();
+                });
+            });
+        });
+    }, 250);
+}
+
+    AppearItemfromDown();
+    AppearItemfromLeft();
+
